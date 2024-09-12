@@ -1,3 +1,23 @@
 .header {
   background-color: black;
+  color: white;
+}
+
+.header__section {
+  display: flex;
+  justify-content: center;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 100px;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  letter-spacing: 3px;
+  padding: 20px;
+}
+
+.header__img {
+  position: relative;
+  width: 200px;
 }
