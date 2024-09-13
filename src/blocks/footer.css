@@ -1,3 +1,32 @@
 .footer {
   background-color: black;
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.footer__name {
+  font-weight: bold;
+}
+
+.footer__job {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.footer__info {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 20px 20px;
+}
+
