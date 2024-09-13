@@ -60,7 +60,7 @@
     animation: scroll 5s linear infinite;
   }
 
-  .slots__first_animation.slots__paused{
+  .slots__paused >* {
         -webkit-animation-play-state: paused !important; 
         -moz-animation-play-state: paused !important; 
         -o-animation-play-state: paused !important;
