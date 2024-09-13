@@ -1,1 +1,16 @@
+.page {
+  background-image: url(../images/background_desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 550px) {
+  .page {
+    background-image: url(../images/background_mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 

@@ -25,3 +25,15 @@
   width: 200px;
 }
 
+@media screen and (max-width: 1150px) {
+  .header__title {
+    font-size: 20px;
+    padding: 0;
+    align-self: center;
+  }
+  .header__img {
+    width: 75px;
+    height: 50px;
+  }
+}
+
