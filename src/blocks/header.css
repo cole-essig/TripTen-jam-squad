@@ -5,9 +5,13 @@
 
 .header__section {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
+.header__title_wrap {
+  display: flex;
+  justify-content: center;
+}
 .header__title {
   margin: 0;
   font-size: 100px;
@@ -16,8 +20,8 @@
   letter-spacing: 3px;
   padding: 20px;
 }
-
 .header__img {
   position: relative;
   width: 200px;
 }
+

@@ -2,6 +2,8 @@
   background-color: black;
   color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  display: block;
+  
 }
 
 .footer__container {
@@ -27,6 +29,6 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
-  margin: 20px 20px;
+  margin: 20px 20;
 }
 
