@@ -1,6 +1,9 @@
 .header {
   background-color: black;
   color: white;
+  margin-bottom: auto;
+  max-width: 100%;
+  width: 100%;
 }
 
 .header__section {
