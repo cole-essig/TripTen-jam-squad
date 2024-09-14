@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     displayRandomMovie(data.results);
   }
 
-  // fetchHorrorMovies();
+  fetchHorrorMovies();
 
   function displayRandomMovie(movies) {
     const randomMovie = getRandomMovie(movies);
@@ -254,6 +254,7 @@ function getRandomNumberBetween(min, max) {
 
 function handleDaddyButtonClick() {
   runReel();
+  cards.classList.remove("cards_opened");
   setTimeout(() => {
     highlightResultsButton();
     getCoinReward(firstSlot, secondSlot, thirdSlot);
