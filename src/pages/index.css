@@ -4,57 +4,7 @@
 @import url(../blocks/cards.css);
 @import url(../blocks/footer.css);
 @import url(../blocks/slots.css);
+@import url(../blocks/movie.css);
+@import url(../blocks/main.css);
+@import url(../blocks/main.css);
 
- .page__content {
-    height: 100%;
-    display: flex;
-    padding-left: 19px;
-    padding-right: 19px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  page-section {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .movie__choice {
-  /*   display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-gap: 20px;  */
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    text-align: center;
-    font-size: 22px;
-}
-
-.movie__title {
-  font-size: 16px;
-  max-width: 150px;
-  white-space: nowrap;
-  display: block;
-  margin: 10px 0;
-  
-}
-
-.movie__img {
-    width: 100%;
-    height: auto;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-}
-
-#randomize-button {
-  text-align: center;
-  margin-top:5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #f39c12;
-  border: none;
-  cursor: pointer;
-}

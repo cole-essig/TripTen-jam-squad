@@ -1,9 +1,9 @@
 .header {
   background-color: black;
   color: white;
+  margin-bottom: auto;
+  max-width: 100%;
   width: 100%;
-  position: absolute;
-  top: 0;
 }
 
 .header__section {
