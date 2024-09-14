@@ -1,4 +1,11 @@
-  .page__content {
+@import url(../blocks/page.css);
+@import url(../blocks/header.css);
+@import url(../blocks/content.css);
+@import url(../blocks/cards.css);
+@import url(../blocks/footer.css);
+@import url(../blocks/slots.css);
+
+ .page__content {
     height: 100%;
     display: flex;
     padding-left: 19px;
@@ -51,9 +58,3 @@
   border: none;
   cursor: pointer;
 }
-@import url(../blocks/page.css);
-@import url(../blocks/header.css);
-@import url(../blocks/content.css);
-@import url(../blocks/cards.css);
-@import url(../blocks/footer.css);
-@import url(../blocks/slots.css)

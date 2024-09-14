@@ -176,6 +176,8 @@ fetchHorrorMovies().then(() => {
 });
  */
 
+
+// COLES CODE 
 const firstSlot = document.querySelector(".slots__first");
 const secondSlot = document.querySelector(".slots__second");
 const thirdSlot = document.querySelector(".slots__third");
