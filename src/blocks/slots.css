@@ -105,30 +105,35 @@
 
 .slots__button_popup_animation {
   animation: pulsate 1.3s ease-in-out infinite;
-  background-color: orangered;
-  color: #fff;
+  background-color: white;
+  color:  rgb(92, 64, 51);
   position: absolute;
   visibility: hidden;
   transition: visibility 1s linear;
   bottom: -40px;
   border: 1px solid rgba(0, 0, 0, .75);
-  min-height: 20px;
+  min-height: 70px;
   max-width: 150px;
   width: 100%;
   z-index: -1;
 }
 
 .slots__button_popup {
-  background-color: orangered;
-  color: #fff;
+  background-color: white;
+  color: rgb(92, 64, 51);
+  padding: 10px 10px;
   position: absolute;
   opacity: 0;
   transition: opacity 1s linear;
   bottom: -40px;
   border: 1px solid rgba(0, 0, 0, .75);
-  min-height: 20px;
+  border-radius: 5%;
+  min-height: 60px;
   max-width: 150px;
   width: 100%;
+  font-size: large;
+  font-weight: bolder;
+  box-shadow: 8px 8px 8px black
 }
 
 .slots__button_popup-visible {
