@@ -1,0 +1,14 @@
+.drink {
+    max-height: 254px;
+    max-width: 150px;
+    width: 100%;
+}
+
+.drink__image {
+    width: 100%;
+    height: calc(100% - 24px);
+}
+
+.drink__title {
+    color: #fff;
+}
