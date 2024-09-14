@@ -48,6 +48,20 @@
     overflow: hidden;
 }
 
+.slots__button {
+  background-color: orangered;
+}
+
+.slots__button_popup {
+  background-color: orangered;
+  opacity: 0;
+  transition: opacity 1s linear 
+}
+
+.slots__button_popup-visible {
+  opacity: 1;
+}
+
 .slots__first_animation span{
   animation: scroll 3s linear infinite;
 }
