@@ -1,7 +1,8 @@
 .drink {
-    max-height: 254px;
-    max-width: 150px;
+    max-height: 320px;
+    max-width: 200px;
     width: 100%;
+    border: 1px solid orangered
 }
 
 .drink__image {
