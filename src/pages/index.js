@@ -5,6 +5,8 @@ const thirdSlot = document.querySelector(".slots__third");
 
 const slotsButton = document.querySelector(".slots__button");
 const slotsButtonPopup = document.querySelector(".slots__button_popup");
+const slotsButtonPopupAnimation = document.querySelector(".slots__button_popup_animation");
+
 
 // FUNCTIONS
 
@@ -28,6 +30,7 @@ function resetReel() {
     thirdSlot.classList.remove(`slots__paused`);
 
     slotsButtonPopup.classList.remove('slots__button_popup-visible');
+    slotsButtonPopupAnimation.classList.remove('slots__button_popup-visible');
 
     resetSpan(firstSlot);
     resetSpan(secondSlot);
@@ -45,6 +48,7 @@ function resetSpan(div) {
 
 function highlightResultsButton() {
   slotsButtonPopup.classList.add('slots__button_popup-visible')
+  slotsButtonPopupAnimation.classList.add('slots__button_popup-visible')
 }
 
 function finishReelAnimation(div) {
