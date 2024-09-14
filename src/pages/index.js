@@ -101,14 +101,14 @@ document.addEventListener("DOMContentLoaded", () => {
     displayRandomMovie(data.results);
   }
 
-  fetchHorrorMovies();
+  // fetchHorrorMovies();
 
   function displayRandomMovie(movies) {
     const randomMovie = getRandomMovie(movies);
     movieChoiceEl.innerHTML = "";
     const movieElement = getMovieElement(randomMovie);
     movieChoiceEl.prepend(movieElement);
-    resizeTitleText();
+    // resizeTitleText();
   }
 
   function getRandomMovie(movies) {
@@ -131,9 +131,10 @@ function getMovieElement(movie) {
   //Get the Movie Poster
   if (movie.poster_path) {
     const img = document.createElement("img");
+    img.classList.add("movie__img")
     img.src = `${imageBaseUrl}${movie.poster_path}`;
     img.alt = `${movie.title} poster`;
-    img.style.width = "150px";
+    // img.style.width = "150px";
     movieList.appendChild(img);
   } else {
     const placeholder = document.createElement("p");
@@ -143,24 +144,21 @@ function getMovieElement(movie) {
   return movieList;
 }
 
-function resizeTitleText() {
-  const titleElements = document.querySelectorAll('.movie__title');
-  titleElements.forEach(title => {
-    const poster = title.nextElementSibling; // Assuming the poster image is the next sibling element
-    const posterWidth = poster ? poster.clientWidth : 150; // Get the width of the poster or use 150px as fallback
-    let fontSize = parseInt(window.getComputedStyle(title).fontSize, 10);
-    const minFontSize = 12; // Set the minimum allowed font size
+// function resizeTitleText() {
+//   const titleElements = document.querySelectorAll('.movie__title');
+//   titleElements.forEach(title => {
+//     const poster = title.nextElementSibling; // Assuming the poster image is the next sibling element
+//     const posterWidth = poster ? poster.clientWidth : 150; // Get the width of the poster or use 150px as fallback
+//     let fontSize = parseInt(window.getComputedStyle(title).fontSize, 10);
+//     const minFontSize = 12; // Set the minimum allowed font size
 
-    // Reduce font size if the text overflows the poster width, down to a minimum size of 12px
-    while (title.scrollWidth > posterWidth && fontSize > minFontSize) {
-      fontSize--;
-      title.style.fontSize = `${fontSize}px`;
-    }
-  });
-}
-
-
-
+//     // Reduce font size if the text overflows the poster width, down to a minimum size of 12px
+//     while (title.scrollWidth > posterWidth && fontSize > minFontSize) {
+//       fontSize--;
+//       title.style.fontSize = `${fontSize}px`;
+//     }
+//   });
+// }
 
 /* function displayMovieInAllCells(movie) {
   for (let i = 0; i < 3; i++) { // Loop for 3 grid cells
