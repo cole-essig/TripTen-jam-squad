@@ -4,12 +4,26 @@
     }
 }
 
+@keyframes pulsate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
 .slots {
-    margin-top: 50px;
+    margin-top: 120px;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .slots__first {
@@ -20,7 +34,7 @@
     font-size: 90px;
     color: #000;
     text-align: center;
-    border: 1px solid orangered;
+    border: 5px solid orangered;
     overflow: hidden;
 }
 
@@ -32,7 +46,7 @@
     font-size: 90px;
     color: #000;
     text-align: center;
-    border: 1px solid orangered;
+    border: 5px solid orangered;
     overflow: hidden;
 }
 
@@ -44,20 +58,94 @@
     font-size: 90px;
     color: #000;
     text-align: center;
-    border: 1px solid orangered;
+    border: 5px solid orangered;
     overflow: hidden;
 }
 
+.slot__first_type_styles {
+  opacity: 1;
+  transition: opacity .1s ease-in;
+}
+
+.slot__second_type_styles {
+  visibility: visible;
+  transition: visibilty .5s ease-in;
+}
+
+.slot__third_type_styles {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.slots__button_animation {
+  background: url('../assets/pumpkin.png') center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -120px;
+  min-height: 100px;
+  max-width: 100px;
+  width: 100%;
+  color: #fff;
+  border: none;
+  animation: pulsate 1.3s ease-in-out infinite;
+}
+
+.slots__button {
+  background: url('../assets/pumpkin.png') center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -120px;
+  min-height: 100px;
+  max-width: 100px;
+  width: 100%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.slots__button_popup_animation {
+  animation: pulsate 1.3s ease-in-out infinite;
+  background-color: orangered;
+  color: #fff;
+  position: absolute;
+  visibility: hidden;
+  transition: visibility 1s linear;
+  bottom: -40px;
+  border: 1px solid rgba(0, 0, 0, .75);
+  min-height: 20px;
+  max-width: 150px;
+  width: 100%;
+  z-index: -1;
+}
+
+.slots__button_popup {
+  background-color: orangered;
+  color: #fff;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s linear;
+  bottom: -40px;
+  border: 1px solid rgba(0, 0, 0, .75);
+  min-height: 20px;
+  max-width: 150px;
+  width: 100%;
+}
+
+.slots__button_popup-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 .slots__first_animation span{
-  animation: scroll 3s linear infinite;
+  animation: scroll 1.5s linear infinite;
 }
 
 .slots__second_animation span{
-    animation: scroll 4s linear infinite;
+    animation: scroll 1.7s linear infinite;
   }
 
   .slots__third_animation span{
-    animation: scroll 5s linear infinite;
+    animation: scroll 1.4s linear infinite;
   }
 
   .slots__paused >* {
@@ -65,5 +153,14 @@
         -moz-animation-play-state: paused !important; 
         -o-animation-play-state: paused !important;
          animation-play-state: paused !important;
-     }
-     
+  }
+
+  .slots__finished {
+    background: url('../assets/coin.gif') center no-repeat;
+    min-height: 100%; 
+  }
+
+  .slots__hidden_numbers {
+    opacity: 0;
+  }
+
