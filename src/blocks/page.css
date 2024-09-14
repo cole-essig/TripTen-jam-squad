@@ -7,11 +7,6 @@
   width: 100%;
 }
 
-.page__content {
-  display: relative;
-  min-height: 100vh;
-}
-
 @media screen and (max-width: 550px) {
   .page {
     background-image: url(../images/background_mobile.jpg);

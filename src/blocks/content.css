@@ -1,3 +1,8 @@
 .content {
-  margin-top: 200px;
+  /* margin-top: 200px; */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+    min-height: 100vh;
+
 }
