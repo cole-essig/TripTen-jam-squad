@@ -77,6 +77,7 @@ const movies = [
   },
 ]; */
 
+<<<<<<< Updated upstream
 //consts
 const apiKey = "18a0a90996ac6ebc36e2bff53773c810";
 const baseUrl = "https://api.themoviedb.org/3";
@@ -153,12 +154,84 @@ function resizeTitleText() {
 
     // Reduce font size if the text overflows the poster width, down to a minimum size of 12px
     while (title.scrollWidth > posterWidth && fontSize > minFontSize) {
+=======
+// Elements
+const firstSlot = document.querySelector(".slots__first");
+const secondSlot = document.querySelector(".slots__second");
+const thirdSlot = document.querySelector(".slots__third");
+const apiKey = "18a0a90996ac6ebc36e2bff53773c810";
+const baseUrl = "https://api.themoviedb.org/3";
+const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
+const movieChoiceEl = document.querySelector(".movie__choice");
+
+// Functions
+function runReel() {
+  firstSlot.classList.add(`slots__first_animation`);
+  secondSlot.classList.add(`slots__second_animation`);
+  thirdSlot.classList.add(`slots__third_animation`);
+}
+
+function stopReel() {
+  firstSlot.classList.add(`slots__paused`);
+  secondSlot.classList.add(`slots__paused`);
+  thirdSlot.classList.add(`slots__paused`);
+}
+
+function handleButtonClick() {
+  runReel();
+  setTimeout(() => {
+    stopReel();
+  }, 4000);
+}
+
+function fetchHorrorMovies() {
+  const url = `${baseUrl}/discover/movie?api_key=${apiKey}&with_genres=27`;
+  return fetch(url).then(response => response.json());
+}
+
+function displayRandomMovie(movies) {
+  const randomMovie = getRandomMovie(movies);
+
+  // Update static movie title and poster
+  const movieTitleElement = document.querySelector(".movie__title");
+  const releaseYear = randomMovie.release_date
+    ? randomMovie.release_date.split("-")[0]
+    : "Unknown Year";
+  movieTitleElement.textContent = `${randomMovie.title} (${releaseYear})`;
+
+  const moviePosterElement = document.querySelector(".movie__img");
+  if (randomMovie.poster_path) {
+    moviePosterElement.src = `${imageBaseUrl}${randomMovie.poster_path}`;
+    moviePosterElement.alt = `${randomMovie.title} poster`;
+  } else {
+    moviePosterElement.src = "";
+    moviePosterElement.alt = "Poster not available";
+  }
+
+  resizeTitleText(); 
+}
+
+function getRandomMovie(movies) {
+  const randomIndex = Math.floor(Math.random() * movies.length);
+  return movies[randomIndex];
+}
+
+function resizeTitleText() {
+  const titleElements = document.querySelectorAll(".movie__title");
+  titleElements.forEach((title) => {
+    title.classList.remove("small-font");
+    let fontSize = parseInt(window.getComputedStyle(title).fontSize, 10);
+    const minFontSize = 12; 
+    const containerWidth = title.parentElement.clientWidth;
+    while (title.scrollWidth > containerWidth && fontSize > minFontSize) {
+>>>>>>> Stashed changes
       fontSize--;
       title.style.fontSize = `${fontSize}px`;
     }
   });
 }
 
+<<<<<<< Updated upstream
 
 
 
@@ -175,3 +248,20 @@ fetchHorrorMovies().then(() => {
   displayMovieInAllCells(randomMovie);
 });
  */
+=======
+// Event Listeners
+document.addEventListener("DOMContentLoaded", () => {
+  const slotsButton = document.querySelector(".slots__button");
+  const randomizedButton = document.getElementById("randomize-button");
+
+  slotsButton.addEventListener("click", () => {
+    handleButtonClick();
+  });
+
+  randomizedButton.addEventListener("click", () => {
+    fetchHorrorMovies().then((data) => displayRandomMovie(data.results));
+  });
+
+  fetchHorrorMovies().then((data) => displayRandomMovie(data.results));
+});
+>>>>>>> Stashed changes
