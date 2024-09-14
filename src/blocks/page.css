@@ -8,10 +8,9 @@
 }
 
 .page__content {
-  display: relative;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 @media screen and (max-width: 550px) {

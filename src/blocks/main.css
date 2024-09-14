@@ -1,3 +1,8 @@
 .main__content {
     margin: 50px auto 50px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
 }
