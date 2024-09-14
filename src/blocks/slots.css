@@ -4,6 +4,12 @@
     }
 }
 
+@keyframes center {
+  to{
+    transform: translateY(var(--p));
+  }
+}
+
 .slots {
     margin-top: 50px;
     height: 100px;
@@ -48,6 +54,22 @@
     overflow: hidden;
 }
 
+.slot__first_type_styles {
+  opacity: 1;
+  transition: opacity .1s ease-in;
+}
+
+.slot__second_type_styles {
+  visibility: visible;
+  transition: visibilty .5s ease-in;
+}
+
+.slot__third_type_styles {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+
 .slots__button {
   background-color: orangered;
 }
@@ -63,15 +85,15 @@
 }
 
 .slots__first_animation span{
-  animation: scroll 3s linear infinite;
+  animation: scroll 1.5s linear infinite;
 }
 
 .slots__second_animation span{
-    animation: scroll 4s linear infinite;
+    animation: scroll 1.7s linear infinite;
   }
 
   .slots__third_animation span{
-    animation: scroll 5s linear infinite;
+    animation: scroll 1.4s linear infinite;
   }
 
   .slots__paused >* {
@@ -79,5 +101,14 @@
         -moz-animation-play-state: paused !important; 
         -o-animation-play-state: paused !important;
          animation-play-state: paused !important;
-     }
-     
+  }
+
+  .slots__finished {
+    background: url('../assets/coin.gif') center no-repeat;
+    min-height: 100%; 
+  }
+
+  .slots__hidden_numbers {
+    opacity: 0;
+  }
+
