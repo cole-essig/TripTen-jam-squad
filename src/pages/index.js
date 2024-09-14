@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function getMovieElement(movie) {
   const movieList = document.createElement("li");
-  
+
   if (movie.poster_path) {
     const img = document.createElement("img");
     img.classList.add("movie__img")
@@ -180,6 +180,7 @@ fetchHorrorMovies().then(() => {
 const firstSlot = document.querySelector(".slots__first");
 const secondSlot = document.querySelector(".slots__second");
 const thirdSlot = document.querySelector(".slots__third");
+const cards = document.querySelector(".cards");
 
 const slotsButton = document.querySelector(".slots__button");
 const slotsButtonPopup = document.querySelector(".slots__button_popup");
@@ -267,5 +268,6 @@ slotsButton.addEventListener("click", () => {
 
 slotsButtonPopup.addEventListener("click", () => {
   resetReel();
+  cards.classList.add("cards_opened");
 })
 

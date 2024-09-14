@@ -2,7 +2,11 @@
   max-height: 320px;
   max-width: 200px;
   width: 100%;
-  border: 1px solid orangered
+  border: 3px solid orangered;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: none;
+  overflow: hidden;
 }
 
 .movie__choice {
@@ -27,8 +31,9 @@
     max-width: 150px;
     white-space: nowrap;
     display: block;
-    margin: 10px 0;
-    color: #fff; 
+    margin: 10px auto;
+    color: #000;
+    font-weight: 700; 
   }
   
   .movie__img {
