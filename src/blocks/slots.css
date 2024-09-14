@@ -24,6 +24,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-bottom: 60px;
 }
 
 .slots__first {
@@ -110,17 +111,18 @@
   position: absolute;
   visibility: hidden;
   transition: visibility 1s linear;
-  bottom: -40px;
-  border: 1px solid rgba(0, 0, 0, .75);
+  bottom: -46px;
+  /* border: 1px solid rgba(0, 0, 0, .75); */
   min-height: 70px;
-  max-width: 150px;
+  max-width: 250px;
   width: 100%;
   z-index: -1;
+  border-radius: 2%;
 }
 
 .slots__button_popup {
-  background-color: white;
-  color: rgb(92, 64, 51);
+  background-color: black;
+  color: rgb(235, 191, 171);
   padding: 10px 10px;
   position: absolute;
   opacity: 0;
@@ -129,11 +131,11 @@
   border: 1px solid rgba(0, 0, 0, .75);
   border-radius: 5%;
   min-height: 60px;
-  max-width: 150px;
-  width: 100%;
+  max-width: 30%;
   font-size: large;
-  font-weight: bolder;
-  box-shadow: 8px 8px 8px black
+  font-weight: 900;
+  text-wrap: nowrap;
+  box-shadow: 3px 3px 8px black
 }
 
 .slots__button_popup-visible {
