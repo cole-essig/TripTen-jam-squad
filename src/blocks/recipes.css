@@ -1,0 +1,14 @@
+.recipe {
+    max-height: 254px;
+    max-width: 150px;
+    width: 100%;
+}
+
+.recipe__image {
+    width: 100%;
+    height: calc(100% - 24px);
+}
+
+.recipe__title {
+    color: #fff;
+}

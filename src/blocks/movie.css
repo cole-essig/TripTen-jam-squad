@@ -7,6 +7,12 @@
       list-style-type: none;
       text-align: center;
       font-size: 22px;
+      width: 100%;
+  }
+
+  .movie__cell {
+    max-width: 298px;
+    width: 100%;
   }
   
   .movie__title {
@@ -23,17 +29,3 @@
       height: auto;
   }
   
-  .button-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  #randomize-button {
-    text-align: center;
-    margin-top:5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #f39c12;
-    border: none;
-    cursor: pointer;
-  }

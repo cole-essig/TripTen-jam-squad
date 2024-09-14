@@ -1,6 +1,12 @@
 .footer {
   color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  bottom: 0;
+  max-width: 100%;
+  width: 100%;
+  min-height: 2.5rem;
+  margin-top: auto;
+  /* background-image: url(../images/pumpkin-video.mp4); */
 }
 
 .footer__container {
