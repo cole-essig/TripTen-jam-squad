@@ -119,16 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function getMovieElement(movie) {
   const movieList = document.createElement("li");
-
-  const details = document.createElement("p");
-  details.classList.add('movie__title');
-  const releaseYear = movie.release_date
-    ? movie.release_date.split("-")[0]
-    : "Unknown Year";
-  details.textContent = `${movie.title} (${releaseYear})`;
-  movieList.appendChild(details);
-
-  //Get the Movie Poster
+  
   if (movie.poster_path) {
     const img = document.createElement("img");
     img.classList.add("movie__img")
@@ -141,6 +132,16 @@ function getMovieElement(movie) {
     placeholder.textContent = "Poster not available";
     movieList.appendChild(placeholder);
   }
+  // GET MOVIE TITLE
+
+  const details = document.createElement("p");
+  details.classList.add('movie__title');
+  const releaseYear = movie.release_date
+    ? movie.release_date.split("-")[0]
+    : "Unknown Year";
+  details.textContent = `${movie.title} (${releaseYear})`;
+  movieList.appendChild(details);
+
   return movieList;
 }
 
