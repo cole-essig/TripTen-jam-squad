@@ -86,10 +86,10 @@ const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
 const movieChoiceEl = document.querySelector(".movie__choice");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const randomizedButton = document.getElementById("randomize-button");
+  // const randomizedButton = document.getElementById("randomize-button");
 
   //eventListeners
-  randomizedButton.addEventListener("click", () => {
+  slotsButtonPopup.addEventListener("click", () => {
     fetchHorrorMovies();
   });
 
