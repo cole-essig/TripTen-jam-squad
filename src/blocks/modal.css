@@ -76,8 +76,34 @@
     opacity: 0.5;
     cursor: pointer;
   }
+
+  .modal__link-button {
+    position: absolute;
+    cursor: pointer;
+    bottom: calc(100% + 5px);
+    left: calc(30%);
+    border: none;
+    background-color: transparent;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: opacity 0.5s ease-in-out;
+    padding: 0;
+    color: orangered;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 800;
+  }
+
+  .modal__link-button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
   
-  
+  .modal__link-hidden {
+    visibility: hidden;
+  }
+
   @media screen and (max-width: 637px) {
     .modal__content {
       padding: 22px;

@@ -83,6 +83,7 @@ const modal = document.querySelector('.modal');
 const modalCloseButton = document.querySelector(".modal__close");
 const modalImage = document.querySelector(".modal__preview-image");
 const modalText = document.querySelector(".modal__image-preview_text")
+const modalLink = document.querySelector(".modal__link");
 
 const slotsButton = document.querySelector(".slots__button");
 const slotsButtonPopup = document.querySelector(".slots__button_popup");
@@ -179,11 +180,14 @@ function openModal(modal, data) {
     modalImage.src = movieImg.src;
     modalImage.alt = movieTitle.textContent;
     modalText.textContent = movieTitle.textContent;
+    modalLink.classList.add("modal__link-hidden");
   } else {
     modalImage.src = data.imageUrl;
     modalImage.alt = data.title;
     modalText.textContent = data.title
+    modalLink.src = data.link
   }
+
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", (e) => {
     closeWithEsc(e)}
@@ -195,6 +199,7 @@ function openModal(modal, data) {
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  modalLink.classList.remove("modal__link-hidden");
   document.removeEventListener("keydown", (e) => {
     closeWithEsc(e)
   });
