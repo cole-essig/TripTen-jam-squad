@@ -205,10 +205,16 @@ function overlayActive() {
     pageOverlay.classList.add("main__content_active");
 }
 
+function overlayRest() {
+  const pageOverlay = document.querySelector(".main__content");
+  pageOverlay.classList.remove("main__content_active");
+}
+
 // EVENTLISTENERS
 
 slotsButton.addEventListener("click", () => {
   handleDaddyButtonClick();
+  overlayRest();
 })
 
 slotsButtonPopup.addEventListener("click", () => {
