@@ -227,9 +227,19 @@ slotsButtonPopup.addEventListener("click", () => {
   overlayActive();
 })
 
-drinkCard.addEventListener("click", openModal(modal));
-recipeCard.addEventListener("click", openModal(modal));
-movieCard.addEventListener("click", openModal(modal));
+drinkCard.addEventListener("click", () => {
+  openModal(modal)
+});
+recipeCard.addEventListener("click",() => {
+  openModal(modal)
+});
+movieCard.addEventListener("click", () => {
+  openModal(modal)
+});
+
+modalCloseButton.addEventListener("click", () => {
+  closeModal(modal);
+})
 
 //  Recipes and Drinks
 const recipes = [
