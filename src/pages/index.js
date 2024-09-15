@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     movieChoiceEl.innerHTML = "";
     const movieElement = getMovieElement(randomMovie);
     movieChoiceEl.prepend(movieElement);
-    // resizeTitleText();
   }
 
   function getRandomMovie(movies) {
@@ -66,36 +65,6 @@ function getMovieElement(movie) {
   return movieList;
 }
 
-// function resizeTitleText() {
-//   const titleElements = document.querySelectorAll('.movie__title');
-//   titleElements.forEach(title => {
-//     const poster = title.nextElementSibling; // Assuming the poster image is the next sibling element
-//     const posterWidth = poster ? poster.clientWidth : 150; // Get the width of the poster or use 150px as fallback
-//     let fontSize = parseInt(window.getComputedStyle(title).fontSize, 10);
-//     const minFontSize = 12; // Set the minimum allowed font size
-
-//     // Reduce font size if the text overflows the poster width, down to a minimum size of 12px
-//     while (title.scrollWidth > posterWidth && fontSize > minFontSize) {
-//       fontSize--;
-//       title.style.fontSize = `${fontSize}px`;
-//     }
-//   });
-// }
-
-/* function displayMovieInAllCells(movie) {
-  for (let i = 0; i < 3; i++) { // Loop for 3 grid cells
-    const movieElement = getMovieElement(movie);
-    movieChoiceEl.appendChild(movieElement); // Append to the movieChoice element
-  }
-}
-
-fetchHorrorMovies().then(() => {
-  // Call the function after fetching movies
-  const randomMovie = getRandomMovie(movies);
-  displayMovieInAllCells(randomMovie);
-});
- */
-
 
 // COLES CODE
 const firstSlot = document.querySelector(".slots__first");
@@ -106,6 +75,11 @@ const recipeImg = document.querySelector(".recipe__image");
 const drinksImg = document.querySelector(".drink__image");
 const recipeTitle = document.querySelector(".recipe__title");
 const drinkTitle = document.querySelector(".drink__title");
+const drinkCard = document.querySelector(".drink");
+const recipeCard = document.querySelector(".recipe");
+const movieCard = document.querySelector(".movie");
+const modal = document.querySelector('.modal');
+const modalCloseButton = document.querySelector(".modal__close");
 
 const slotsButton = document.querySelector(".slots__button");
 const slotsButtonPopup = document.querySelector(".slots__button_popup");
@@ -189,6 +163,38 @@ function updateCards(element, cardTitle, cardImage) {
   cardImage.alt = element.title;
 }
 
+function openModal(modal) {
+  modal.classList.add("modal_opened");
+  document.addEventListener("keydown", (e) => {
+    closeWithEsc(e)}
+  );
+  modal.addEventListener("click", (e) => {
+    closeWithClick(e)}
+  );
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", (e) => {
+    closeWithEsc(e)
+  });
+  modal.removeEventListener("click", (e) => {
+    closeWithClick(e)
+  });
+}
+
+function closeWithEsc(e) {
+  if (e.key === "Escape") {
+    closeModal(modal);
+  }
+}
+
+function closeWithClick(e) {
+  if (e.target === e.currentTarget) {
+    closeModal(modal);
+  }
+}
+
 // HANDLERS
 
 function handleDaddyButtonClick() {
@@ -225,6 +231,20 @@ slotsButtonPopup.addEventListener("click", () => {
   updateCards(recipeData, recipeTitle, recipeImg);
   cards.classList.add("cards_opened");
   overlayActive();
+})
+
+drinkCard.addEventListener("click", () => {
+  openModal(modal)
+});
+recipeCard.addEventListener("click",() => {
+  openModal(modal)
+});
+movieCard.addEventListener("click", () => {
+  openModal(modal)
+});
+
+modalCloseButton.addEventListener("click", () => {
+  closeModal(modal);
 })
 
 //  Recipes and Drinks
