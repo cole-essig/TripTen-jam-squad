@@ -183,6 +183,7 @@ function openModal(modal, data) {
     console.log(modalDescription);
     modalText.textContent = movieTitle.textContent;
     modalLink.classList.add("modal__link-hidden");
+    modalDescription.textContent = '';
   } else {
     modalImage.src = data.imageUrl;
     modalImage.alt = data.title;
