@@ -266,7 +266,7 @@ const recipes = [
       link: 'https://cashmereandcocktails.com/2020/09/17/pumpkin-cheesecake-truffles/'
     },
     {
-      title: 'Simmered to perfection in a cozy crockpot, this Starbucks-inspired apple cider is a warm blend of sweet apples, fragrant spices, and comforting fall flavors!',
+      title: 'Sweet & Salty Fall Snack Mix',
       imageUrl: 'https://inspiredbycharm.com/wp-content/uploads/2022/09/bowl-Sweet-and-Salty-Fall-Snack-Mix.jpg',
       description: 'With a perfect blend of sweet, salty, and crunchy, this snack mix combines peanut butter-flavored Chex, cheesy crackers, marshmallows, and festive candy corn for an irresistible fall treat!',
       link: 'https://inspiredbycharm.com/sweet-and-salty-fall-snack-mix/'

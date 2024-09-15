@@ -2,11 +2,13 @@
   max-height: 320px;
   max-width: 200px;
   width: 100%;
-  border: 3px solid orangered;
+  border: .5px solid orangered;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: none;
   overflow: hidden;
+  background-color: #ffffffbd;
+  box-shadow: 8px 5px 9px orange;
 }
 
 .movie__choice {
@@ -27,16 +29,18 @@
   }
 
   .movie__title {
-    font-size: 16px;
+    font-size: 15px;
     max-width: 150px;
-    white-space: nowrap;
+    text-wrap: wrap;
     display: block;
-    margin: 0 auto;
+    margin: -3px auto;
+    text-align: center;
     color: #000;
     font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
   .movie__img {
       width: 100%;
-      height: 34vh;
+      height: 18.5vh;
   }
