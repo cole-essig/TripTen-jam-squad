@@ -31,12 +31,12 @@
     max-width: 150px;
     white-space: nowrap;
     display: block;
-    margin: 10px auto;
+    margin: 0 auto;
     color: #000;
     font-weight: 700;
   }
 
   .movie__img {
       width: 100%;
-      height: auto;
+      height: 34vh;
   }

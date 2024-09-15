@@ -105,10 +105,9 @@
   background: url('../assets/PUMPKIN_BUTTON4x.png') center no-repeat;
   background-size: contain;
   position: absolute;
-  top: -330px;
-  right: 515px;
-  min-height: 200px;
-  max-width: 200px;
+  top: -360px;
+  min-height: 300px;
+  max-width: 300px;
   width: 100%;
   color: #fff;
   border: none;
