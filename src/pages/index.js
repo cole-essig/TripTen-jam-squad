@@ -352,5 +352,4 @@ const drinks = [
     description: 'Sweet caramel and crisp apple flavors swirl together with a splash of white wine, creating a luscious, autumn-inspired sangria perfect for sipping during a fall movie night!',
     link: 'https://mommakesdinner.com/caramel-apple-sangria/'
   },
-
 ];
