@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   fetchHorrorMovies();
-
+  debugger;
   function displayRandomMovie(movies) {
     const randomMovie = getRandomMovie(movies);
     movieChoiceEl.innerHTML = "";
@@ -74,12 +74,16 @@ const cards = document.querySelector(".cards");
 const recipeImg = document.querySelector(".recipe__image");
 const drinksImg = document.querySelector(".drink__image");
 const recipeTitle = document.querySelector(".recipe__title");
+const movieImg = document.querySelector(".movie__img")
 const drinkTitle = document.querySelector(".drink__title");
+const movieTitle = document.querySelector(".movie__title")
 const drinkCard = document.querySelector(".drink");
 const recipeCard = document.querySelector(".recipe");
 const movieCard = document.querySelector(".movie");
 const modal = document.querySelector('.modal');
 const modalCloseButton = document.querySelector(".modal__close");
+const modalImage = document.querySelector(".modal__preview-image");
+const modalText = document.querySelector(".modal__image-preview_text");
 
 const slotsButton = document.querySelector(".slots__button");
 const slotsButtonPopup = document.querySelector(".slots__button_popup");
@@ -163,7 +167,11 @@ function updateCards(element, cardTitle, cardImage) {
   cardImage.alt = element.title;
 }
 
-function openModal(modal) {
+function openModal(modal, data) {
+  modalImage.src = data.imageUrl;
+  modalImage.alt = data.title;
+  modalText.textContent = data.title
+  
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", (e) => {
     closeWithEsc(e)}
@@ -234,13 +242,13 @@ slotsButtonPopup.addEventListener("click", () => {
 })
 
 drinkCard.addEventListener("click", () => {
-  openModal(modal)
+  openModal(modal, drinkData)
 });
 recipeCard.addEventListener("click",() => {
-  openModal(modal)
+  openModal(modal, recipeData)
 });
 movieCard.addEventListener("click", () => {
-  openModal(modal)
+  openModal(modal, movieCard);
 });
 
 modalCloseButton.addEventListener("click", () => {
