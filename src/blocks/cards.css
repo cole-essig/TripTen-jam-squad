@@ -6,4 +6,10 @@
     width: 100%;
     gap: 50px;
     margin-top: 75px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.cards_opened {
+    opacity: 1;
 }

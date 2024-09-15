@@ -1,14 +1,27 @@
 .recipe {
-    max-height: 254px;
-    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    max-height: 320px;
+    max-width: 200px;
     width: 100%;
+    border: 3px solid orangered;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: none;
+    overflow: hidden;
 }
 
 .recipe__image {
     width: 100%;
-    height: calc(100% - 24px);
+    height: 85%;
 }
 
 .recipe__title {
-    color: #fff;
+    font-size: 16px;
+    max-width: 150px;
+    white-space: nowrap;
+    display: block;
+    margin: 10px auto;
+    color: #000;
+    font-weight: 700;
 }
