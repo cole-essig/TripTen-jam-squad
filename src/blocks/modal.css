@@ -45,7 +45,7 @@
     font-weight: 400;
     color: #fff;
     position: absolute;
-    bottom: -50px;
+    bottom: -65px;
     max-width: 291px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -61,7 +61,7 @@
     font-weight: 400;
     color: #fff;
     position: absolute;
-    bottom: -120px;
+    bottom: -130px;
     max-width: 291px;
     white-space: wrap;
     background-color: rgba(0, 0, 0, 0.648);
