@@ -202,19 +202,19 @@ function handleDaddyButtonClick() {
 
 function overlayActive() {
     const pageOverlay = document.querySelector(".main__content");
-    pageOverlay.classList.add("main__content_active");
+    pageOverlay.classList.add("main__content_overlay-active");
 }
 
-function overlayRest() {
+function overlayReset() {
   const pageOverlay = document.querySelector(".main__content");
-  pageOverlay.classList.remove("main__content_active");
+  pageOverlay.classList.remove("main__content_overlay-active");
 }
 
 // EVENTLISTENERS
 
 slotsButton.addEventListener("click", () => {
   handleDaddyButtonClick();
-  overlayRest();
+  overlayReset();
 })
 
 slotsButtonPopup.addEventListener("click", () => {

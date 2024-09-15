@@ -10,6 +10,9 @@
 }
 
 .main__content_active {
-  background: rgba(0, 0, 0, 0.831);
   z-index: 999;
+}
+
+.main__content_overlay-active {
+  background: rgba(0, 0, 0, 0.831);
 }
