@@ -5,11 +5,11 @@
     min-height: 100vh;
     justify-content: center;
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.229);
+    background: rgba(0, 0, 0, 0.166);
     z-index: 999;
 }
 
 .main__content_active {
-  background: rgba(0, 0, 0, 0.703);
+  background: rgba(0, 0, 0, 0.831);
   z-index: 999;
 }

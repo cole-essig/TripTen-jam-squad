@@ -202,14 +202,13 @@ function handleDaddyButtonClick() {
 
 function overlayActive() {
     const pageOverlay = document.querySelector(".main__content");
-    pageOverlay.classList.add(".main__content_active");
+    pageOverlay.classList.add("main__content_active");
 }
 
 // EVENTLISTENERS
 
 slotsButton.addEventListener("click", () => {
   handleDaddyButtonClick();
-  overlayActive();
 })
 
 slotsButtonPopup.addEventListener("click", () => {
@@ -219,6 +218,7 @@ slotsButtonPopup.addEventListener("click", () => {
   updateCards(drinkData, drinkTitle, drinksImg);
   updateCards(recipeData, recipeTitle, recipeImg);
   cards.classList.add("cards_opened");
+  overlayActive();
 })
 
 //  Recipes and Drinks
@@ -287,7 +287,7 @@ const recipes = [
 
 const drinks = [
   {
-    title: 'Crock Pot Pumpkin Spice White Hot Chocolate',
+    title: 'Pumpkin Spice White Hot Chocolate',
     imageUrl: 'https://www.anightowlblog.com/wp-content/uploads/2015/09/Pumpkin-Spice-White-Hot-Chocolate-HERO.jpg',
     description: 'Crock Pot Pumpkin Spice White Hot Chocolate is just three ingredients and is so easy to make! Perfect for a chilly fall evening!',
     link: 'https://www.anightowlblog.com/crock-pot-pumpkin-spice-white-hot-chocolate/#_a5y_p=4432296'
@@ -299,7 +299,7 @@ const drinks = [
     link: 'https://butterwithasideofbread.com/pumpkin-milkshakes/'
   },
   {
-    title: 'Starbucks Caramel Apple Cider - Copycat Recipe',
+    title: 'Starbucks Caramel Apple Cider',
     imageUrl: 'https://i.pinimg.com/564x/b0/11/09/b01109ce2658bc7091a60bc117b186a8.jpg',
     description: 'Simmered to perfection in a cozy crockpot, this Starbucks-inspired apple cider is a warm blend of sweet apples, fragrant spices, and comforting fall flavors!',
     link: 'https://www.scatteredthoughtsofacraftymom.com/starbucks-knock-off-caramel-apple/'
