@@ -4,5 +4,12 @@
     flex-direction: column;
     min-height: 100vh;
     justify-content: center;
-    margin: 50px auto 200px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.229);
+    z-index: 999;
+}
+
+.main__content_active {
+  background: rgba(0, 0, 0, 0.703);
+  z-index: 999;
 }

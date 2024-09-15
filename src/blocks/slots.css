@@ -18,49 +18,59 @@
 }
 
 .slots {
-    margin-top: 120px;
+    margin-top: 400px;
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     padding-bottom: 60px;
+    gap: 10px;
 }
 
 .slots__first {
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-    background-color: #fff;
-    font-size: 90px;
-    color: #000;
-    text-align: center;
-    border: 5px solid orangered;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-height: 250px;
+  width: 175px;
+  background-color: #000;
+  font-size: 90px;
+  color: rgb(250, 179, 1);
+  text-align: center;
+  border: 0.1px solid rgb(250, 179, 1);
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px white;
 }
 
 .slots__second {
-    display: flex;
-    flex-direction: column;
-    height: 100px;
-    background-color: #fff;
-    font-size: 90px;
-    color: #000;
-    text-align: center;
-    border: 5px solid orangered;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-height: 250px;
+  width: 175px;
+  background-color: #000;
+  font-size: 90px;
+  color: rgb(250, 179, 1);
+  text-align: center;
+  border: 0.1px solid rgb(250, 179, 1);
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px white;
 }
 
 .slots__third {
     display: flex;
     flex-direction: column;
-    height: 100px;
-    background-color: #fff;
+    max-height: 250px;
+    width: 175px;
+    background-color: #000;
     font-size: 90px;
-    color: #000;
+    color: rgb(250, 179, 1);
     text-align: center;
-    border: 5px solid orangered;
+    border: 0.1px solid rgb(250, 179, 1);
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px white;
 }
 
 .slot__first_type_styles {
@@ -95,9 +105,9 @@
   background: url('../images/jack-1.png') center no-repeat;
   background-size: contain;
   position: absolute;
-  top: -160px;
-  min-height: 200px;
-  max-width: 200px;
+  top: -530px;
+  min-height: 600px;
+  max-width: 600px;
   width: 100%;
   color: #fff;
   border: none;
@@ -111,7 +121,7 @@
   position: absolute;
   visibility: hidden;
   transition: visibility 1s linear;
-  bottom: -46px;
+  bottom: -106px;
   /* border: 1px solid rgba(0, 0, 0, .75); */
   min-height: 70px;
   max-width: 250px;
@@ -127,7 +137,7 @@
   position: absolute;
   opacity: 0;
   transition: opacity 1s linear;
-  bottom: -40px;
+  bottom: -100px;
   border: 1px solid rgba(0, 0, 0, .75);
   border-radius: 5%;
   min-height: 60px;
@@ -135,7 +145,7 @@
   font-size: large;
   font-weight: 900;
   text-wrap: nowrap;
-  box-shadow: 3px 3px 8px black
+  box-shadow: 3px 3px 20px white;
 }
 
 .slots__button_popup-visible {

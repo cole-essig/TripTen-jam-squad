@@ -200,10 +200,16 @@ function handleDaddyButtonClick() {
   }, getRandomNumberBetween(3000, 7000))
 }
 
+function overlayActive() {
+    const pageOverlay = document.querySelector(".main__content");
+    pageOverlay.classList.add(".main__content_active");
+}
+
 // EVENTLISTENERS
 
 slotsButton.addEventListener("click", () => {
   handleDaddyButtonClick();
+  overlayActive();
 })
 
 slotsButtonPopup.addEventListener("click", () => {
