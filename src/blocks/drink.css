@@ -1,7 +1,7 @@
 .drink {
     display: flex;
     flex-direction: column;
-    max-height: 320px;
+    min-height: 300px;
     max-width: 200px;
     width: 100%;
     border: .5px solid orange;
@@ -13,8 +13,9 @@
 }
 
 .drink__image {
+    max-width: 200px;
     width: 100%;
-    height: 18.5vh;
+    min-height: 270px;
 }
 
 .drink__title {
