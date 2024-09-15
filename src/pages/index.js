@@ -3,6 +3,8 @@
 const apiKey = "18a0a90996ac6ebc36e2bff53773c810";
 const baseUrl = "https://api.themoviedb.org/3";
 const imageBaseUrl = "https://image.tmdb.org/t/p/w500";
+let movieImg = null;
+let movieTitle = null;
 
 //Elements
 const movieChoiceEl = document.querySelector(".movie__choice");
@@ -24,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   fetchHorrorMovies();
-  debugger;
+
   function displayRandomMovie(movies) {
     const randomMovie = getRandomMovie(movies);
     movieChoiceEl.innerHTML = "";
@@ -65,7 +67,6 @@ function getMovieElement(movie) {
   return movieList;
 }
 
-
 // COLES CODE
 const firstSlot = document.querySelector(".slots__first");
 const secondSlot = document.querySelector(".slots__second");
@@ -74,16 +75,14 @@ const cards = document.querySelector(".cards");
 const recipeImg = document.querySelector(".recipe__image");
 const drinksImg = document.querySelector(".drink__image");
 const recipeTitle = document.querySelector(".recipe__title");
-const movieImg = document.querySelector(".movie__img")
 const drinkTitle = document.querySelector(".drink__title");
-const movieTitle = document.querySelector(".movie__title")
 const drinkCard = document.querySelector(".drink");
 const recipeCard = document.querySelector(".recipe");
 const movieCard = document.querySelector(".movie");
 const modal = document.querySelector('.modal');
 const modalCloseButton = document.querySelector(".modal__close");
 const modalImage = document.querySelector(".modal__preview-image");
-const modalText = document.querySelector(".modal__image-preview_text");
+const modalText = document.querySelector(".modal__image-preview_text")
 
 const slotsButton = document.querySelector(".slots__button");
 const slotsButtonPopup = document.querySelector(".slots__button_popup");
@@ -91,6 +90,7 @@ const slotsButtonPopupAnimation = document.querySelector(".slots__button_popup_a
 
 let drinkData = {};
 let recipeData = {};
+let movieData = {};
 
 // FUNCTIONS
 
@@ -168,10 +168,17 @@ function updateCards(element, cardTitle, cardImage) {
 }
 
 function openModal(modal, data) {
-  modalImage.src = data.imageUrl;
-  modalImage.alt = data.title;
-  modalText.textContent = data.title
-  
+  let movieTitle = document.querySelector(".movie__title");
+  let movieImg = document.querySelector(".movie__img");
+  if (data === movieData) {
+    modalImage.src = movieImg.src;
+    modalImage.alt = movieTitle.textContent;
+    modalText.textContent = movieTitle.textContent;
+  } else {
+    modalImage.src = data.imageUrl;
+    modalImage.alt = data.title;
+    modalText.textContent = data.title
+  }
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", (e) => {
     closeWithEsc(e)}
@@ -203,6 +210,7 @@ function closeWithClick(e) {
   }
 }
 
+
 // HANDLERS
 
 function handleDaddyButtonClick() {
@@ -233,6 +241,7 @@ slotsButtonPopup.addEventListener("click", () => {
   updateCards(recipeData, recipeTitle, recipeImg);
   cards.classList.add("cards_opened");
   overlayActive();
+  console.log(movieTitle);
 })
 
 drinkCard.addEventListener("click", () => {
@@ -242,7 +251,7 @@ recipeCard.addEventListener("click",() => {
   openModal(modal, recipeData)
 });
 movieCard.addEventListener("click", () => {
-  openModal(modal, movieCard);
+  openModal(modal, movieData);
 });
 
 modalCloseButton.addEventListener("click", () => {
