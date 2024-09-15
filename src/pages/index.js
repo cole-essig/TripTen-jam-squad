@@ -122,6 +122,7 @@ function resetReel() {
 }
 
 function resetSpan(div) {
+  // full resets slot reel to run again, Takes and element
   div.classList.remove("slots__finished");
   const childSpans = div.querySelectorAll('*');
 
@@ -130,19 +131,21 @@ function resetSpan(div) {
   })
 }
 
-function highlightResultsButton() {
+function highlightResultsButton() { 
+  // Shows buton that runs api fetch and card population
   slotsButtonPopup.classList.add('slots__button_popup-visible')
   slotsButtonPopupAnimation.classList.add('slots__button_popup-visible')
 }
 
 function finishReelAnimation(div) {
-  pauseReel(div);
+  pauseReel(div); 
   div.classList.add("slots__finished");
   const childSpans = div.querySelectorAll('*');
 
   childSpans.forEach(span => {
     span.classList.add("slots__hidden_numbers")
   })
+  // pauses the slot reel and hides the numbers so the coin image shows up
 }
 
 function getCoinReward(first, second, third) {
@@ -155,7 +158,8 @@ function getRandomNumberBetween(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function randomPicker(arr) {
+
+function randomPicker(arr) { 
   const randomIndex = Math.floor(Math.random() * arr.length);
   const data = arr[randomIndex];
   return data;
@@ -168,6 +172,7 @@ function updateCards(element, cardTitle, cardImage) {
 }
 
 function openModal(modal, data) {
+  // due to movie fetch function not creating elements until after button click, they need to be found here
   let movieTitle = document.querySelector(".movie__title");
   let movieImg = document.querySelector(".movie__img");
   if (data === movieData) {
@@ -213,7 +218,7 @@ function closeWithClick(e) {
 
 // HANDLERS
 
-function handleDaddyButtonClick() {
+function handlePumpkinButtonClick() {
   runReel();
   cards.classList.remove("cards_opened");
   setTimeout(() => {
@@ -230,7 +235,7 @@ function overlayActive() {
 // EVENTLISTENERS
 
 slotsButton.addEventListener("click", () => {
-  handleDaddyButtonClick();
+  handlePumpkinButtonClick();
 })
 
 slotsButtonPopup.addEventListener("click", () => {
