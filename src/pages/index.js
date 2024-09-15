@@ -82,7 +82,8 @@ const movieCard = document.querySelector(".movie");
 const modal = document.querySelector('.modal');
 const modalCloseButton = document.querySelector(".modal__close");
 const modalImage = document.querySelector(".modal__preview-image");
-const modalText = document.querySelector(".modal__image-preview_text")
+const modalText = document.querySelector(".modal__image-preview_text");
+const modalDescription = document.querySelector(".modal__image-preview_description");
 
 const slotsButton = document.querySelector(".slots__button");
 const slotsButtonPopup = document.querySelector(".slots__button_popup");
@@ -173,11 +174,13 @@ function openModal(modal, data) {
   if (data === movieData) {
     modalImage.src = movieImg.src;
     modalImage.alt = movieTitle.textContent;
+    console.log(modalDescription);
     modalText.textContent = movieTitle.textContent;
   } else {
     modalImage.src = data.imageUrl;
     modalImage.alt = data.title;
-    modalText.textContent = data.title
+    modalText.textContent = data.title;
+    modalDescription.textContent = data.description;
   }
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", (e) => {
