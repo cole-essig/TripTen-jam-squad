@@ -17,6 +17,19 @@
     max-height: 16vh;
 }
 
+.recipe__image_preview {
+  max-height: 75vh;
+  max-width: 75vw;
+  width: auto;
+  height: auto;
+  background-color: unset;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+  top: 90px;
+}
+
 .recipe__title {
     font-size: 15px;
     max-width: 150px;
