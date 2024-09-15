@@ -82,6 +82,7 @@ const movieCard = document.querySelector(".movie");
 const modal = document.querySelector('.modal');
 const modalCloseButton = document.querySelector(".modal__close");
 const modalImage = document.querySelector(".modal__preview-image");
+const modalLink = document.querySelector(".modal__link");
 const modalText = document.querySelector(".modal__image-preview_text");
 const modalDescription = document.querySelector(".modal__image-preview_description");
 
@@ -123,6 +124,7 @@ function resetReel() {
 }
 
 function resetSpan(div) {
+  // full resets slot reel to run again, Takes and element
   div.classList.remove("slots__finished");
   const childSpans = div.querySelectorAll('*');
 
@@ -132,6 +134,7 @@ function resetSpan(div) {
 }
 
 function highlightResultsButton() {
+  // Shows buton that runs api fetch and card population
   slotsButtonPopup.classList.add('slots__button_popup-visible')
   slotsButtonPopupAnimation.classList.add('slots__button_popup-visible')
 }
@@ -144,6 +147,7 @@ function finishReelAnimation(div) {
   childSpans.forEach(span => {
     span.classList.add("slots__hidden_numbers")
   })
+  // pauses the slot reel and hides the numbers so the coin image shows up
 }
 
 function getCoinReward(first, second, third) {
@@ -155,6 +159,7 @@ function getCoinReward(first, second, third) {
 function getRandomNumberBetween(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
 
 function randomPicker(arr) {
   const randomIndex = Math.floor(Math.random() * arr.length);
@@ -169,6 +174,7 @@ function updateCards(element, cardTitle, cardImage) {
 }
 
 function openModal(modal, data) {
+  // due to movie fetch function not creating elements until after button click, they need to be found here
   let movieTitle = document.querySelector(".movie__title");
   let movieImg = document.querySelector(".movie__img");
   if (data === movieData) {
@@ -176,12 +182,15 @@ function openModal(modal, data) {
     modalImage.alt = movieTitle.textContent;
     console.log(modalDescription);
     modalText.textContent = movieTitle.textContent;
+    modalLink.classList.add("modal__link-hidden");
   } else {
     modalImage.src = data.imageUrl;
     modalImage.alt = data.title;
     modalText.textContent = data.title;
     modalDescription.textContent = data.description;
+    modalLink.src = data.link
   }
+
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", (e) => {
     closeWithEsc(e)}
@@ -193,6 +202,7 @@ function openModal(modal, data) {
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  modalLink.classList.remove("modal__link-hidden");
   document.removeEventListener("keydown", (e) => {
     closeWithEsc(e)
   });
@@ -216,7 +226,7 @@ function closeWithClick(e) {
 
 // HANDLERS
 
-function handleDaddyButtonClick() {
+function handlePumpkinButtonClick() {
   runReel();
   cards.classList.remove("cards_opened");
   setTimeout(() => {
@@ -238,7 +248,7 @@ function overlayReset() {
 // EVENTLISTENERS
 
 slotsButton.addEventListener("click", () => {
-  handleDaddyButtonClick();
+  handlePumpkinButtonClick();
   overlayReset();
 })
 
