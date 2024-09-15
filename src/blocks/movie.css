@@ -1,13 +1,14 @@
 .movie {
-  max-height: 320px;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
   max-width: 200px;
   width: 100%;
   border: .5px solid orange;
-  background-color: #fff;
+  background-color: #ffffffbd;
   border-radius: 12px;
   box-shadow: none;
   overflow: hidden;
-  background-color: #ffffffbd;
   box-shadow: 8px 5px 9px rgba(255, 166, 0, 0.57);
 }
 
@@ -24,7 +25,7 @@
   }
 
   .movie__cell {
-    max-width: 298px;
+    max-width: 300px;
     width: 100%;
   }
 
@@ -41,6 +42,7 @@
   }
 
   .movie__img {
+      max-width: 200px;
       width: 100%;
-      max-height: 16vh;
+      min-height: 275px;
   }

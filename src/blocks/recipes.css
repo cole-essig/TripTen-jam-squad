@@ -1,7 +1,7 @@
 .recipe {
     display: flex;
     flex-direction: column;
-    max-height: 320px;
+    min-height: 300px;
     max-width: 200px;
     width: 100%;
     border: .5px solid orange;
@@ -13,6 +13,7 @@
 }
 
 .recipe__image {
+    max-width: 200px;
     width: 100%;
     max-height: 16vh;
 }
@@ -28,6 +29,7 @@
   position: relative;
   margin: 0 auto;
   top: 90px;
+    min-height: 270px;
 }
 
 .recipe__title {
