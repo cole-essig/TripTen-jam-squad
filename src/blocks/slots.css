@@ -102,12 +102,13 @@
 }
 
 .slots__button {
-  background: url('../images/jack-1.png') center no-repeat;
+  background: url('../assets/PUMPKIN_BUTTON4x.png') center no-repeat;
   background-size: contain;
   position: absolute;
-  top: -530px;
-  min-height: 600px;
-  max-width: 600px;
+  top: -330px;
+  right: 515px;
+  min-height: 200px;
+  max-width: 200px;
   width: 100%;
   color: #fff;
   border: none;

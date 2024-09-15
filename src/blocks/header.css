@@ -1,5 +1,6 @@
 .header {
-  background-color: black;
+  background-color: #000;
+  background-image: url('../assets/FALLMOVIE\ NIGHT.svg');
   color: white;
   margin-bottom: auto;
   max-width: 100%;
