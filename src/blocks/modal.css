@@ -50,6 +50,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.648);
   }
 
 
@@ -63,7 +64,7 @@
     bottom: -120px;
     max-width: 291px;
     white-space: wrap;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.648);
   }
 
   .modal__content {
