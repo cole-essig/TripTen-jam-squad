@@ -57,7 +57,7 @@
 
   .modal__image-preview_description {
     font-family: "Inter", Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
     color: #fff;
@@ -104,6 +104,13 @@
     height: 40px;
     transition: opacity 0.5s ease-in-out;
     padding: 0;
+    color: orangered;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .modak__link {
     color: orangered;
     font-size: 16px;
     line-height: 1.2;
