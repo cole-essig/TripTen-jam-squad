@@ -189,7 +189,7 @@ function openModal(modal, data) {
     modalImage.alt = data.title;
     modalText.textContent = data.title;
     modalDescription.textContent = data.description;
-    modalLink.src = data.link
+    modalLink.href = data.link
   }
 
   modal.classList.add("modal_opened");
