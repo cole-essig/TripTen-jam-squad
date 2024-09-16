@@ -1,6 +1,6 @@
 .modal {
     position: fixed;
-    top: 0;
+    top: -50px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -30,8 +30,9 @@
   }
 
   .modal__preview-image {
-    max-width: 75vw;
-    max-height: 75vh;
+    max-width: 60vw;
+    width: 100%;
+    max-height: 60vh;
     width: auto;
     height: auto;
     border-radius: 0;
@@ -61,7 +62,7 @@
     font-weight: 400;
     color: #fff;
     position: absolute;
-    bottom: -120px;
+    bottom: -140px;
     max-width: 400px;
     white-space: wrap;
     background-color: rgba(0, 0, 0, 0.648);
@@ -90,6 +91,27 @@
   .modal__close:hover {
     opacity: 0.5;
     cursor: pointer;
+  }
+
+  .modal__link-button {
+    position: absolute;
+    cursor: pointer;
+    bottom: calc(100% + 5px);
+    left: calc(40%);
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    transition: opacity 0.5s ease-in-out;
+    padding: 0;
+    color: orangered;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .modal__link-hidden {
+    visibility: hidden;
   }
 
 
