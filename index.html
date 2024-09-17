@@ -9,13 +9,14 @@
       name="description"
       content="TBD"
     />
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" alt="TestingToDeploy" />
     <title>Fall Project TBD</title>
     <link rel="stylesheet" href="pages/index.css">
+    <link href="pages/index.css" rel="stylesheet">
     </head>
     <body class="page">
       <div class="page__content">
- <!-- Header links/features-->
+ <!-- Header links/features   ------------------------------->
       <header class="header">
         <div class="header__section">
           <img src="./images/pumpkin-header-image.jpg" alt="Pumpin title image" class="header__img">
@@ -72,7 +73,8 @@
         <div class="movie">
           <ul class="movie__choice">
             <li id="movie__cell">
-              <img class="movie__img">
+              <img class="movie__img" src="https://image.tmdb.org/t/p/w500/v9DxbWV7G3Np3rGzqiK3gsmIyfg.jpg" alt="Longlegs (2024)">
+              <p class="movie__title">Long Legs (2024)</p>
             </li>
           </ul>
         </div>
@@ -125,9 +127,9 @@
         id="modal-preview-image-src"
       />
       <button class="modal__close" type="button" id="image-modal-close"></button>
-
-        <button class="modal__link-button" type="button"><a class="modal__link" href="">Recipe</a></button>
-
+      <a class="modal__link" href="">
+        <button class="modal__link-button" type="button">Recipe Link</button>
+      </a>
       <p class="modal__image-preview_text"></p>
       <p class="modal__image-preview_description"></p>
     </div>
